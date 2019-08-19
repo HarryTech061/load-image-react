@@ -22,7 +22,7 @@ export class Image extends React.Component<ImageProps> {
     }
 
     public render() {
-        return <a ref={el => this.container = el} href={this.props.src} className="loaded-image-container" />;
+        return <a onClick={function(event) { event.preventDefault() }} ref={el => this.container = el} href={this.props.src} className="loaded-image-container" />;
     }
 
     private async renderImage() {
